@@ -1,10 +1,10 @@
-#The script will make an http get request to api.ipstack.com and query the API key.
-#For security purposes I placed the API key into a separate file: config.py
+#The script will make an HTTP GET request to api.ipstack.com and query the API key.
+#For security purposes, I placed the API key into a separate file: config.py
 
 #Run script:
 ./api_test.py
 
-#script will prompt you for an IP address:
+#script will prompt you for an IP address entry:
 Enter an IP address (or leave it blank to exit) 192.124.249.29
 
 #Address is confirmed and coordinates returned (also included a data field for City):
