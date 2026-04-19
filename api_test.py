@@ -26,9 +26,12 @@ if __name__ == '__main__':
 
     if ip_address:
         data = query_ip_intelligence(ip_address)
-        print(data)
+      
         if data:
             print(f"IP Address: {data['ip_address']}")
+            print(f"Postal Code: {data['location']['postal_code']}")
+            print(f"Timezone: {data['timezone']['name']}")
+            print(f"ISP: {data['asn']['name']}")
             print(f"City: {data['location']['city']}")
             print(f"Region: {data['location']['region']}")
             print(f"Country: {data['location']['country']}")
