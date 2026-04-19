@@ -17,7 +17,7 @@ def query_ipstack(ip_address):
         data = response.json()
         return data
     except requests.exceptions.RequestException as e:
-        print("Error: Request to IPStack API failed")
+        print(f"Error: {e}")
         return None
 
 # the main section asks to input an ip address
