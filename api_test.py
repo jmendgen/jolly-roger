@@ -9,7 +9,7 @@ import requests
 ABSTRACT_API_URL = 'https://ip-intelligence.abstractapi.com/v1/?'
 
 # this function takes the ip address and queries the ipstack api to retrieve the ip
-def query_ipstack(ip_address):
+def query_ip_intelligence(ip_address):
     url = f"{ABSTRACT_API_URL}api_key={API_KEY}&ip_address={ip_address}"
     try:
         response = requests.get(url)
@@ -24,18 +24,17 @@ def query_ipstack(ip_address):
 if __name__ == '__main__':
     ip_address = input("Enter an IP address (or leave it blank to exit): ")
 
-# this calls the  function with the user provided ip address    
     if ip_address:
-        data = query_ipstack(ip_address) print(data)
-
+        data = query_ip_intelligence(ip_address)
+        print(data)
         if data:
             print(f"IP Address: {data['ip_address']}")
-            print(f"City: {data['city']['name']}")
+            print(f"City: {data['location']['city']}")
+            print(f"Region: {data['location']['region']}")
+            print(f"Country: {data['location']['country']}")
             print(f"Latitude: {data['location']['latitude']}")
             print(f"Longitude: {data['location']['longitude']}")
-            # Add more data fields as needed
         else:
             print("Failed to obtain location data for the provided IP address.")
-# if the ip_address was left blank, the program terminates
     else:
         print("Exiting the program.")
