@@ -29,7 +29,7 @@ if __name__ == '__main__':
         data = query_ipstack(ip_address)
 
         if data:
-            print(f"IP Address: {data['ip']}")
+            print(f"IP Address: {data['ip_address']}")
             print(f"City: {data['city']['name']}")
             print(f"Latitude: {data['location']['latitude']}")
             print(f"Longitude: {data['location']['longitude']}")
