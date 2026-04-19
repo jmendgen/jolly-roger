@@ -6,7 +6,7 @@ from config import API_KEY
 import requests
 
 # this defines the base URL for the ipstack api
-IPSTACK_API_URL = 'https://ip-intelligence.abstractapi.com/v1/?'
+ABSTRACT_API_URL = 'https://ip-intelligence.abstractapi.com/v1/?'
 
 # this function takes the ip address and queries the ipstack api to retrieve the ip
 def query_ipstack(ip_address):
@@ -30,9 +30,9 @@ if __name__ == '__main__':
 
         if data:
             print(f"IP Address: {data['ip']}")
-            print(f"City: {data['city']}")
-            print(f"Latitude: {data['latitude']}")
-            print(f"Longitude: {data['longitude']}")
+            print(f"City: {data['city']['name']}")
+            print(f"Latitude: {data['location']['latitude']}")
+            print(f"Longitude: {data['location']['longitude']}")
             # Add more data fields as needed
         else:
             print("Failed to obtain location data for the provided IP address.")
