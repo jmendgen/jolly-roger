@@ -1,3 +1,3 @@
 # config.py
-API_KEY = '5f789bd8a89c6ee69f4021d632925a58'
+API_KEY = 'db3b598108ed453096f165dac5ccae50'
 
