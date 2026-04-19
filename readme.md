@@ -1,4 +1,4 @@
-#The script will make an HTTP GET request to api.ipstack.com and query the API key.
+#The script asks for an IP address, sends it to the Abstract API with the key, and prints back geographic and network info (city, country, ISP, coordinates, etc.) for that IP.
 #For security purposes, I placed the API key into a separate file: config.py
 
 #Run script:
