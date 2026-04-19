@@ -26,7 +26,7 @@ if __name__ == '__main__':
 
 # this calls the  function with the user provided ip address    
     if ip_address:
-        data = query_ip_intelligence(ip_address)
+        data = query_ip_intelligence(ip_address) print(data)
 
         if data:
             print(f"IP Address: {data['ip_address']}")
