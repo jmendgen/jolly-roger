@@ -6,7 +6,7 @@ from config import API_KEY
 import requests
 
 # this defines the base URL for the ipstack api
-IPSTACK_API_URL = 'http://api.ipstack.com/'
+IPSTACK_API_URL = 'https://ip-intelligence.abstractapi.com/v1/?'
 
 # this function takes the ip address and queries the ipstack api to retrieve the ip
 def query_ipstack(ip_address):
