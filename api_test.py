@@ -10,7 +10,7 @@ ABSTRACT_API_URL = 'https://ip-intelligence.abstractapi.com/v1/?'
 
 # this function takes the ip address and queries the ipstack api to retrieve the ip
 def query_ipstack(ip_address):
-    url = f"{IPSTACK_API_URL}{ip_address}?access_key={API_KEY}"
+    url = f"{ABSTRACT_API_URL}api_key={API_KEY}&ip_address={ip_address}"
     try:
         response = requests.get(url)
         response.raise_for_status()
